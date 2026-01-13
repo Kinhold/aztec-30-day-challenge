@@ -1,111 +1,57 @@
 contract IronShrimper {
     use dep::aztec::prelude::*;
-    use dep::value_note::value_note::ValueNote;
-    // Note: Ensure you have BadgeNote defined in your notes.nr
-    use crate::notes::BadgeNote; 
+    use dep::field_note::field_note::FieldNote;
 
-    // --- THE VAULT STORAGE ---
-    #[storage]
-    struct Storage<Context> {
-        // Private Balances for the 25,000 $SHRP Legacy supply
-        balances: Map<AztecAddress, PrivateSet<ValueNote, Context>, Context>,
-        // The 50 Ironclad Badge notes (The Master Keys)
-        badges: PrivateSet<BadgeNote, Context>,
-        // Public counter to enforce the 50-badge limit
-        total_badges: PublicMutable<u32, Context>,
-    }
-
-    // --- THE MISSION CONSTANTS ---
-    global MAX_SUPPLY: u32 = 25000;
+    // --- THE MISSION ANCHORS ---
+    global ADMIN_KEY = 0x2c102a379cb5a4b5c77e4bf0286f87fd6a2087d5682f336683d75502b4322569;
+    global SYNDICATE_WALLET = 0x1ade907ef16ff81f9aceeb90844b0f83edb8cddebb3d1503d235f94983132417;
+    
+    global MAX_SUPPLY: u128 = 25000;
     global MAX_BADGES: u32 = 50;
-    global WYATT_2033: u64 = 2014848000;
-    global JULIANNA_2035: u64 = 2074646400;
+    
+    // Exact Unix Timestamps provided by the Captain
+    global WYATT_NOV_2033: u64 = 2014848000;
+    global JULIANNA_SEP_2035: u64 = 2074636800;
 
-    // --- INITIALIZATION ---
-    #[aztec(initializer)]
-    fn constructor(admin: AztecAddress) {
-        storage.total_badges.write(0);
-        // Initial deployment sets the "Law of the Sea"
-    }
-
-    // --- THE GANGSTER TRANSFER (With 5% Legacy Fee) ---
-    #[aztec(private)]
-    fn transfer(to: AztecAddress, amount: Field) {
-        let sender = context.msg_sender();
-        
-        // 1. Calculate the 5% Legacy Fee for the Syndicate
-        let fee_amount = (amount * 5) / 100;
-        let transfer_amount = amount - fee_amount;
-
-        // 2. Execute the Private Transfers
-        // (Logic here handles the ZK-proofs of the notes)
-        
-        // 3. Time-Lock Enforcement (Example for W'yatt's Vault)
-        if (to == AztecAddress::from_field(WYATT_WALLET)) {
-            assert(context.timestamp() >= WYATT_2033, "Vault is Locked until 2033!");
-        }
-    }
-
-    // --- THE BADGE GATE ---
-    #[aztec(private)]
-    fn mint_badge(to: AztecAddress) {
-        let current_count = storage.total_badges.read();
-        assert(current_count < MAX_BADGES, "The First 50 are already locked!");
-        
-        // Logic to create the new BadgeNote
-        storage.total_badges.write(current_count + 1);
-    }
-}
-
-contract IronShrimper {
-    // 1. IMPORTS GO HERE (at the very top)
-    use dep::aztec::protocol_types::address::AztecAddress;
-    use dep::aztec::state_vars::{Map, PublicMutable, PrivateSet};
-    // ... other imports
-
-    // 2. STORAGE PLACEMENT (Right here!)
     #[storage]
     struct Storage {
-        balances: Map<AztecAddress, EasyPrivateUint>,
-        badges: PrivateSet<BadgeNote>,
+        balances: Map<AztecAddress, PrivateSet<FieldNote>>,
         total_badges: PublicMutable<u32>,
+        admin: PublicMutable<AztecAddress>,
     }
 
-    // 3. FUNCTIONS GO BELOW (Constructor, Transfer, etc.)
     #[aztec(initializer)]
-    fn constructor(admin: AztecAddress) {
-        // initialization logic
+    fn constructor(admin_address: AztecAddress) {
+        // Only the holder of the Founders Key can initialize the law
+        assert(admin_address.to_field() == ADMIN_KEY, "Unauthorized Founder Key");
+        storage.admin.write(admin_address);
+        storage.total_badges.write(0);
+    }
+
+    #[aztec(private)]
+    fn transfer(to: AztecAddress, amount: u128) {
+        let sender = context.msg_sender();
+        
+        // 1. The 5% "Gangster" Fee Protocol
+        let fee = (amount * 5) / 100;
+        let transfer_amount = amount - fee;
+
+        // 2. Execute the Private Transfers (Subtract total, add split)
+        // Note: Real implementation uses balance_utils to manage notes
+        
+        // 3. Route the fee to the Syndicate Treasury
+        let treasury = AztecAddress::from_field(SYNDICATE_WALLET);
+        // [Internal logic to update private notes for 'to' and 'treasury']
+    }
+
+    #[aztec(private)]
+    fn claim_legacy(secret_nullifier: Field, release_year: u32) {
+        if (release_year == 2033) {
+            assert(context.timestamp() >= WYATT_NOV_2033, "Nov 6, 2033 Bridge is not yet open!");
+        } else if (release_year == 2035) {
+            assert(context.timestamp() >= JULIANNA_SEP_2035, "Sep 29, 2035 Bridge is not yet open!");
+        }
+        
+        // Use Discovery logic to prove ownership via secret_nullifier
     }
 }
-
-// Inside your main.nr contract scope
-#[private]
-fn transfer(to: AztecAddress, amount: u128) {
-    // 1. Calculate the 5% Legacy Fee
-    let fee = (amount * 5) / 100; 
-    let transfer_amount = amount - fee;
-
-    // 2. Send the Fee to the Syndicate/Legacy Wallet
-    let syndicate_wallet = AztecAddress::from_field(0x...YOUR_WALLET_ADDRESS);
-    token_utils::decrement_balance(context, msg_sender(), amount);
-    token_utils::increment_balance(context, to, transfer_amount);
-    token_utils::increment_balance(context, syndicate_wallet, fee); // The "Gangster" cut 🥷
-}
-// The "Iron Shrimper" Hard Cap Law
-global MAX_IRON_SHRIMPERS: u32 = 50;
-
-fn verify_badge_supply(current_count: u32) {
-    // This is the "Brawn" of the circuit. 
-    // If current_count is 50, the transaction REJECTS.
-    assert(current_count < MAX_IRON_SHRIMPERS, "The Iron Shrimper Crew is Full!");
-}
-
-#[test]
-fn test_hard_cap() {
-    // This test passes because 49 is less than 50
-    verify_badge_supply(49);
-}
-
-
-
-Is that in place?
