@@ -35,3 +35,7 @@ Badge.nr The Honor Guard Enforces the "Founding 50" limit. Proves who was there 
 Discovery.nr The Compass The "Lion-Hearted" logic that lets W'yatt (2033) and Julianna (2035) find their notes. Merkle Membership: Scans the tree without revealing the leaf.
 📜 Captain’s Log: Entry 04 // Jan 12, 2026
 "Log 04: The 'WE' Protocol. We have finalized the technical specs for the Raven House devs. We are demonstrating a 3-tier architectural approach (Main, Badge, Discovery) that ensures the legacy is maximally useful, self-sovereign, and threat-resistant. The mystery of 'WE' is now part of the code's DNA."
+Component Logic Protocol The "WE" Mission Security Layer
+Main.nr The Syndicate Foundry Governs the 25,000 $SHRP cap and the 5% legacy fee logic. Private State: Balances are shielded in the Aztec Data Tree.
+Badge.nr The Honor Guard Enforces the "Founding 50" limit for the original crew. Nullifier Sets: Ensures a "One-Key-One-Badge" integrity.
+Discovery.nr The Compass The specific frequency for W'yatt (2033) and Julianna (2035). Merkle Proofs: Membership verification without leaf exposure.
