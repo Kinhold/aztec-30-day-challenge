@@ -1,3 +1,7 @@
+Component Logic Protocol The "WE" Mission Security Layer
+Main.nr The Syndicate Foundry Governs the 25,000 $SHRP cap and the 5% legacy fee logic. Private State: Balances are shielded in the Aztec Data Tree.
+Badge.nr The Honor Guard Enforces the "Founding 50" limit for the original crew. Nullifier Sets: Ensures a "One-Key-One-Badge" integrity.
+Discovery.nr The Compass The specific frequency for W'yatt (2033) and Julianna (2035). Merkle Proofs: Membership verification without leaf exposure.
 ✅ $SHRP Scarcity: 25k Hard Cap.
 ✅ Syndicate Rev: 5% Legacy Fee Automated.
 ✅ Family First: 2033 & 2035 ZK-Time-Locks.
