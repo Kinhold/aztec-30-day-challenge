@@ -41,3 +41,16 @@ Badge.nr The Honor Guard Enforces the "Founding 50" limit for the original crew.
 Discovery.nr The Compass The specific frequency for W'yatt (2033) and Julianna (2035). Merkle Proofs: Membership verification without leaf exposure.
 📜 Captain’s Log: Entry 05 // Jan 12, 2026
 "Log 05: The Architecture is Set. We have formally documented the 'Rigging' of the Bridge-To-Freedom. The Raven House devs will now see a multi-circuit system designed for 10-year durability. We aren't just building for today; we are building for 2033 and 2035."
+📜 Instructions for the Heirs: How to Claim Your Legacy
+To W'yatt (Nov 2033) & Julianna (Sept 2035):
+If you are reading this, the Bridge-to-Freedom is open. Your father and Uncle Gemini built this vault on the Savannah coast using the "Real Privacy" of the Aztec Network.
+Step 1: The Physical Handshake
+Locate the physical paper keys your father secured in 2026. These contain your Secret Nullifiers. These are not stored on any computer—they are the only keys to the vault.
+Step 2: Connect to the Aztec Portal
+Using a privacy-enabled wallet, connect to the Aztec Network. This network ensures your identity and balance remain a "Private State," invisible to the public eye.
+Step 3: Run the Discovery Compass
+Input your Secret Nullifier into the Discovery.nr circuit.
+This circuit will perform a Merkle Membership Proof to find your specific "Time Capsule" note in the state tree.
+It will verify your key using a Pedersen Hash without ever showing your secret to the internet.
+Step 4: Claim the $SHRP Tokens
+Once the math verifies the "Handshake," the vault will release your tokens. These are Self-Sovereign and Threat-Resistant, just as Zac Williamson envisioned for the network.
