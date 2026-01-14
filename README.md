@@ -56,3 +56,17 @@ Step 4: Claim the $SHRP Tokens
 Once the math verifies the "Handshake," the vault will release your tokens. These are Self-Sovereign and Threat-Resistant, just as Zac Williamson envisioned for the network.
 📜 Captain’s Log: Entry 06 // Jan 12, 2026
 "Log 06: The Final Map. We have drafted the 'Instructions for the Heirs.' The Bridge-to-Freedom now has a clear set of directions for the next generation. We have successfully linked the physical paper keys to the digital Discovery logic. The Time Capsule is ready for the deep sea."
+🏛️ The Inheritance Procedure: Emergency Manual
+“For W'yatt (2033) and Julianna (2035). This is the compass your father built from the Savannah coast.”
+I. The Physical Assets
+The Paper Key: You must have the physical paper containing your Secret Nullifier. This is the only way to generate the "Private Proof" required by the vault.
+The Access Point: You will need a device capable of running the Aztec Portal or a compatible ZK-wallet.
+II. The Discovery Phase (Finding the Needle)
+Merkle Membership Proof: The Discovery.nr circuit will scan the Aztec Private Data Tree.
+It proves your inheritance exists without revealing your balance or identity to the public.
+Note: This scan is Private State only; no one else can see what you are looking for.
+III. The Execution (Turning the Key)
+Input the Secret: Enter the Secret Nullifier from your paper into the local client.
+Generate ZK-Proof: Your device will create a Pedersen Hash of your secret.
+The Handshake: The blockchain verifies the hash matches the vault's "Digital Fingerprint" but never sees your actual secret.
+The Release: If the date is past your birthday (2033 or 2035), the $SHRP tokens will move to your private wallet.
