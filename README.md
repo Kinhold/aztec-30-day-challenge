@@ -29,3 +29,7 @@ Circuit Logic Engine Primary Purpose Security Layer
 Main.nr Founders Gate Manages the $SHRP supply (25k cap) and the 5% Syndicate Fee. Private State / Admin Public Key
 Badge.nr Proof of Honor Limits the "Founding 50" Badges. Ensures exclusivity for the original crew. Nullifier-based Minting
 Discovery.nr The Compass Allows W'yatt (2033) and Julianna (2035) to find their private notes in the tree.
+Circuit Logic Engine The "WE" Purpose Security Protocol
+Main.nr The Foundry Manages the $SHRP supply and the 5% Syndicate fee for the family mission. Private State: Balances are encrypted in the Data Tree.
+Badge.nr The Honor Guard Enforces the "Founding 50" limit. Proves who was there at the start. Nullifier Sets: Prevents double-claiming of the legacy.
+Discovery.nr The Compass The "Lion-Hearted" logic that lets W'yatt (2033) and Julianna (2035) find their notes. Merkle Membership: Scans the tree without revealing the leaf.
