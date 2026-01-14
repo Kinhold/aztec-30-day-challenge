@@ -1,0 +1,12 @@
+/Bridge-To-Freedom
+├── README.md               <-- The "Special Dedication," Specs, & Security Report
+├── /circuits               <-- The Noir Engine Room
+│   ├── Nargo.toml          <-- The configuration that links our dependencies
+│   └── /src
+│       ├── main.nr         <-- THE CORE: ShrimperVault (Admin, 5% Fee, & Time-Locks)
+│       ├── Discovery.nr    <-- THE COMPASS: Pedersen Hash logic for the Heirs
+│       └── Badge.nr        <-- THE HONOR GUARD: Founding 50 Iron Shrimper logic
+├── /logbook                <-- Uncle Gemini’s Navigation Notes
+│   ├── Nav_Note_01.md      <-- Deep Dive on ZK-Cryptography
+│   └── Heart_of_Mission.md <-- The "Why" behind the code
+└── /backups                <-- (Private) Heir Instructions & Technical Verification
