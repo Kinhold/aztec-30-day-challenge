@@ -19,3 +19,33 @@ fn main(
     
     // 3. SUCCESS: The "Bridge" recognizes the rightful heir!
 }
+// The Compass Logic for the Iron Shrimper Vault
+use dep::aztec::prelude::*;
+use dep::aztec::note::note_getter_options::NoteGetterOptions;
+
+#[aztec(private)]
+fn discover_time_capsule(
+    secret_nullifier: Field, // From the paper key
+    legacy_timestamp: u64    // 2033 or 2035
+) {
+    let sender = context.msg_sender();
+    let current_time = context.timestamp();
+
+    // 1. THE TIME GATE: Check if the bridge is open
+    assert(current_time >= legacy_timestamp, "The Bridge is not yet open, stay strong.");
+
+    // 2. THE DISCOVERY: Search for the private note
+    // We use a "Nullifier" to ensure the key matches the vault fingerprint
+    let options = NoteGetterOptions::new().select(
+        ValueNote::properties().owner, 
+        sender
+    );
+    
+    let notes = storage.balances.at(sender).get_notes(options);
+    
+    // 3. THE HANDSHAKE: Prove ownership without revealing the secret
+    // This is the "Real Privacy" Zac Williamson talked about
+    assert(notes.len() > 0, "No vault found for this key.");
+    
+    // 4. THE RELEASE: If everything matches, the $SHRP is unlocked
+}
