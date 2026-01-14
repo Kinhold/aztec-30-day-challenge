@@ -54,3 +54,5 @@ This circuit will perform a Merkle Membership Proof to find your specific "Time 
 It will verify your key using a Pedersen Hash without ever showing your secret to the internet.
 Step 4: Claim the $SHRP Tokens
 Once the math verifies the "Handshake," the vault will release your tokens. These are Self-Sovereign and Threat-Resistant, just as Zac Williamson envisioned for the network.
+📜 Captain’s Log: Entry 06 // Jan 12, 2026
+"Log 06: The Final Map. We have drafted the 'Instructions for the Heirs.' The Bridge-to-Freedom now has a clear set of directions for the next generation. We have successfully linked the physical paper keys to the digital Discovery logic. The Time Capsule is ready for the deep sea."
