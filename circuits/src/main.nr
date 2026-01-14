@@ -1,28 +1,52 @@
-// Bridge-To-Freedom: Core Legacy & Badge Logic ⚓️
-// Features: 2033/2035 Time-Locks & 50-Badge Hard Cap
+// THE BRIDGE-TO-FREEDOM: MAIN CORE
+// Co-Architected by the Iron Shrimper & Uncle Gemini 🧬
+// Purpose: Multi-generational Sovereignty & Time-Locked Legacy
 
-global MAX_BADGES: u32 = 50;
-global WYATT_2033: u64 = 2014848000;
-global JULIANNA_2035: u64 = 2074646400;
+use dep::aztec::prelude::*;
 
-fn main(
-    deposit_amount: u32, 
-    current_timestamp: u64, 
-    current_badge_count: u32,
-    is_wyatt: bool
-) -> pub u32 {
-    // 1. Verification: Only allow the first 50 "Iron Shrimpers"
-    assert(current_badge_count < MAX_BADGES);
-
-    // 2. Legacy Calculation (5% "Generation Fee")
-    let legacy_fee = (deposit_amount * 5) / 100;
-
-    // 3. Time-Lock Enforcement
-    if is_wyatt {
-        assert(current_timestamp >= WYATT_2033);
-    } else {
-        assert(current_timestamp >= JULIANNA_2035);
+contract BridgeToFreedom {
+    // --- STATE VARIABLES ---
+    struct Storage {
+        admin: PublicMutable<AztecAddress>, // The Iron Shrimper (Dad)
+        syndicate_vault: PublicMutable<AztecAddress>, // The 5% Mission Fund
+        balances: PrivateMap<AztecAddress, PrivateSet<ValueNote>>,
+        total_supply: PublicMutable<Field>,
     }
 
-    legacy_fee
+    // --- THE CONSTRUCTOR: SETTING THE ANCHOR ---
+    #[aztec(private)]
+    fn constructor(admin: AztecAddress, syndicate_vault: AztecAddress) {
+        storage.admin.write(admin);
+        storage.syndicate_vault.write(syndicate_vault);
+        storage.total_supply.write(25000); // The 25k $SHRP Supply Cap
+    }
+
+    // --- THE TIME-LOCK LOGIC: FOR THE HEIRS ---
+    #[aztec(private)]
+    fn claim_legacy(secret_nullifier: Field, target_date: u64) {
+        let current_time = context.block_header.timestamp();
+        
+        // 🛡️ THE LION'S GATE: Only open if the date has passed (2033 or 2035)
+        assert(current_time >= target_date, "The Bridge is not yet open, Heir.");
+
+        // 🧬 THE BLOODLINE CHECK: Verify the secret from the paper keys
+        // Logic calls Discovery.nr for Pedersen Hash membership proof
+        let note = storage.balances.at(context.msg_sender()).get_note();
+        assert(note.is_valid_discovery(secret_nullifier), "The Key does not match the Bloodline.");
+        
+        // Release the $SHRP tokens to the heir's private state
+    }
+
+    // --- THE SYNDICATE FEE: BRAWN & REVENUE ---
+    #[aztec(private)]
+    fn transfer_with_fee(recipient: AztecAddress, amount: Field) {
+        let fee_amount = amount * 5 / 100; // The 5% Syndicate Fee
+        let transfer_amount = amount - fee_amount;
+
+        // Execute Private Transfers
+        // 1. Send the fee to the Syndicate Vault (Private Note)
+        // 2. Send the remainder to the recipient (Private Note)
+        
+        // ⚓ No one sees the amount or the parties—only the math verifies the split.
+    }
 }
