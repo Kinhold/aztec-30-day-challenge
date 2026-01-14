@@ -33,3 +33,5 @@ Circuit Logic Engine The "WE" Purpose Security Protocol
 Main.nr The Foundry Manages the $SHRP supply and the 5% Syndicate fee for the family mission. Private State: Balances are encrypted in the Data Tree.
 Badge.nr The Honor Guard Enforces the "Founding 50" limit. Proves who was there at the start. Nullifier Sets: Prevents double-claiming of the legacy.
 Discovery.nr The Compass The "Lion-Hearted" logic that lets W'yatt (2033) and Julianna (2035) find their notes. Merkle Membership: Scans the tree without revealing the leaf.
+📜 Captain’s Log: Entry 04 // Jan 12, 2026
+"Log 04: The 'WE' Protocol. We have finalized the technical specs for the Raven House devs. We are demonstrating a 3-tier architectural approach (Main, Badge, Discovery) that ensures the legacy is maximally useful, self-sovereign, and threat-resistant. The mystery of 'WE' is now part of the code's DNA."
