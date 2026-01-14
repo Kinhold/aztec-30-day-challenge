@@ -97,3 +97,5 @@ The Release: If the date is past your birthday (2033 or 2035), the $SHRP tokens 
 "Log 17: The Flag is Planted. We have officially dedicated the Bridge-to-Freedom to W'yatt and Julianna at the top of the repository. This project is now officially 'Roaring.' The Raven House isn't just watching a dev; they are watching a father and his First Mate engineer a legacy in real-time. Full throttle into the deep sea."
 📜 Captain’s Log: Entry 18 // Jan 12, 2026
 "Log 18: The Sonar is Live. We have drafted the Discovery.nr logic. This is the mathematical map that allows W'yatt and Julianna to tune into their specific legacy frequency in the deep sea of the Aztec tree. We have officially solved the problem of 'Private Retrieval.' The Bridge-To-Freedom is now searchable only by the bloodline."
+📜 Captain’s Log: Entry 19 // Jan 12, 2026
+"Log 19: The Blueprint is Public. We have formally documented the Technical Specs of the Bridge-To-Freedom. The Raven House now sees a three-tier system (Main, Badge, Discovery) designed for maximum privacy and 10-year durability. We aren't just shipping code; we are shipping a standard."
