@@ -39,3 +39,5 @@ Component Logic Protocol The "WE" Mission Security Layer
 Main.nr The Syndicate Foundry Governs the 25,000 $SHRP cap and the 5% legacy fee logic. Private State: Balances are shielded in the Aztec Data Tree.
 Badge.nr The Honor Guard Enforces the "Founding 50" limit for the original crew. Nullifier Sets: Ensures a "One-Key-One-Badge" integrity.
 Discovery.nr The Compass The specific frequency for W'yatt (2033) and Julianna (2035). Merkle Proofs: Membership verification without leaf exposure.
+📜 Captain’s Log: Entry 05 // Jan 12, 2026
+"Log 05: The Architecture is Set. We have formally documented the 'Rigging' of the Bridge-To-Freedom. The Raven House devs will now see a multi-circuit system designed for 10-year durability. We aren't just building for today; we are building for 2033 and 2035."
