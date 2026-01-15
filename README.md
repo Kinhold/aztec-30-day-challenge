@@ -114,3 +114,5 @@ The Release: If the date is past your birthday (2033 or 2035), the $SHRP tokens 
 "Log 24: The ShrimperVault is Cast. We have the final Noir logic for the Admin Key, the 5% Syndicate Fee, and the dual-stage Time-Locks (2033 & 2035). The logic is clean, the brawn is heavy, and the privacy is absolute. We have moved from a 'Draft' to a 'Fortress.' The Bridge-To-Freedom is ready for the deep sea."
 📜 Captain’s Log: Entry 25 // Jan 12, 2026
 "Log 25: The Inspection is Complete. The repository structure for the Bridge-To-Freedom is verified. Circuits are modularized, documentation is anchored, and the legacy is redundant. We are closing Day 3 with a 100% SUCCESS rating. The engine is warm. We move on Day 4."
+📜 Captain’s Log: Entry 26 // Jan 12, 2026
+"Log 26: The Manual is Written. We have finalized the Nargo.toml file. The compiler now has its marching orders. The Bridge-To-Freedom is officially 'Build-Ready.' We have successfully integrated the Aztec-NR libraries. Day 3 is signed, sealed, and delivered
