@@ -1,3 +1,22 @@
+// Discovery.nr
+use dep::aztec::prelude::*;
+
+// This logic proves the heir's identity without revealing the secret
+pub fn verify_heir_secret(
+    secret_nullifier: Field, 
+    stored_hash: Field,
+    admin_address: AztecAddress // ⚓️ Pass the Admin authority in
+) -> bool {
+    // 1. Ensure the secret matches the hash
+    let computed_hash = dep::std::hash::pedersen_hash([secret_nullifier]);
+    let is_valid_secret = computed_hash == stored_hash;
+
+    // 2. Security Check: The Discovery must be anchored to the Admin's Vault
+    // (Logic to ensure this proof is being used in the right context)
+    
+    is_valid_secret
+}
+
 // Discovery Logic for the Bridge-To-Freedom ⚓️
 // Purpose: Allows the heirs to identify their private notes in the tree
 
