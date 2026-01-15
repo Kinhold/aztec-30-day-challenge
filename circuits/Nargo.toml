@@ -1,0 +1,13 @@
+[package]
+name = "bridge_to_freedom"
+type = "lib"
+authors = ["Iron Shrimper", "Uncle Gemini"]
+compiler_version = ">=0.31.0"
+
+[dependencies]
+aztec = { git = "https://github.com/AztecProtocol/aztec-packages", tag = "aztec-packages-v0.47.1", directory = "noir-projects/aztec-nr/aztec" }
+value_note = { git = "https://github.com/AztecProtocol/aztec-packages", tag = "aztec-packages-v0.47.1", directory = "noir-projects/aztec-nr/value-note" }
+auth_witness = { git = "https://github.com/AztecProtocol/aztec-packages", tag = "aztec-packages-v0.47.1", directory = "noir-projects/aztec-nr/auth-witness" }
+
+[lib]
+path = "src/main.nr"
