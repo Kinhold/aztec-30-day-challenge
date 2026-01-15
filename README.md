@@ -128,3 +128,7 @@ The Release: If the date is past your birthday (2033 or 2035), the $SHRP tokens 
 "Log 31: Security Breach Averted. The Captain identified a potential Private Key leak. Logic has been scrubbed. We are now using Public Address Anchors. The 'Iron Shrimper' law is clean, safe, and ready for deployment. The separation of Code and Keys is now absolute."
 📜 Captain’s Log: Entry 32 // Jan 13, 2026
 "Log 32: Admin Logic Decoupled. We realized that hard-coding the Captain's identity was a trap. We have updated the 'final.nr' to allow for Admin Injection and Captaincy Transfer. The Bridge is now flexible enough to survive a lost wallet but strong enough to keep strangers out."
+📜 Captain’s Log: Entry 33 // Jan 13, 2026
+"Log 33: Context Logic Audited. We found the 'Admin Ghost' in the private circuit. We have split the Admin checks between Public and Private layers to ensure the Captain always has control of the helm. The 'final.nr' is now structurally sound for the Aztec Kernel."
+📜 Captain’s Log: Entry 34 // Jan 13, 2026
+"Log 34: Structural Overhaul. We identified a path collision in the circuits directory. The Admin logic was being 'orphaned' by nested src folders. We have consolidated the files into a single engine room. The Captain now has a direct line to every deck of the ship."
