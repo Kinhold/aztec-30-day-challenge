@@ -134,3 +134,5 @@ The Release: If the date is past your birthday (2033 or 2035), the $SHRP tokens 
 "Log 34: Structural Overhaul. We identified a path collision in the circuits directory. The Admin logic was being 'orphaned' by nested src folders. We have consolidated the files into a single engine room. The Captain now has a direct line to every deck of the ship."
 📜 Captain’s Log: Entry 35 // Jan 13, 2026
 "Log 35: Modular Authority Synced. We identified that the Admin was fragmented across five different files. We have implemented the 'Central Command' pattern in main.nr. The Captain’s wheel now controls the Gate, the Ledger, and the Assets simultaneously. One Key, One Law."
+📜 Captain’s Log: Entry 36 // Jan 13, 2026
+"Log 36: Discovery Logic Anchored. We identified that the heir-verification logic in Discovery.nr was floating without Admin oversight. We have integrated an Admin-context check to ensure that only the Iron Shrimper’s authorized secrets can trigger the 2033/2035 release. The Compass is now locked to the Bridge."
