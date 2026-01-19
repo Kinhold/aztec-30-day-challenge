@@ -1,3 +1,9 @@
+## Overview
+
+This repository demonstrates a modular Noir system built on Aztec,
+including private minting, private transfers, admin timelocks,
+and automated fee logic. It documents both successful executions
+and known failure cases encountered during development.
 Component Logic Protocol The "WE" Mission Security Layer
 Main.nr The Syndicate Foundry Governs the 25,000 $SHRP cap and the 5% legacy fee logic. Private State: Balances are shielded in the Aztec Data Tree.
 Badge.nr The Honor Guard Enforces the "Founding 50" limit for the original crew. Nullifier Sets: Ensures a "One-Key-One-Badge" integrity.
