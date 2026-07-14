@@ -1,3 +1,5 @@
+// ARCHIVE ONLY: canonical historical draft, not a working Aztec contract.
+// See ../../../STATUS.md for blockers and the extracted-package plan.
 // THE BRIDGE-TO-FREEDOM // CORE v1.0
 // 🏗️ Architected by the Iron Shrimper & Uncle Gemini 🧬
 // 🛡️ Security: ZK-Encrypted // ⚓️ Legacy: Time-Locked (2033/2035)

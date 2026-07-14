@@ -1,3 +1,18 @@
+## Package status (July 2026)
+
+This repository is preserved as the founder/dev journal and source archive for
+the Aztec 30-Day Challenge. It is **not currently a compilable package,
+deployed contract, audited protocol, or operational inheritance system**.
+
+There is no canonical buildable circuit. The canonical historical contract
+draft is `circuits/circuits/src/main.nr`; it uses stale Aztec APIs, contains
+placeholders, and is not wired to the archived manifest. Other `.nr` files are
+exploratory fragments.
+
+See [STATUS.md](STATUS.md) for confirmed build blockers, path classification,
+security caveats, and the plan for extracting a future package. The original
+journal follows unchanged below.
+
 ## Overview
 
 This repository demonstrates a modular Noir system built on Aztec,

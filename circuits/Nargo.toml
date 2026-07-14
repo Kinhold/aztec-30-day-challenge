@@ -1,3 +1,5 @@
+# ARCHIVE ONLY: this is not a working package manifest.
+# Its source/dependency paths are intentionally preserved; see ../STATUS.md.
 [package]
 name = "bridge_to_freedom"
 type = "lib"
